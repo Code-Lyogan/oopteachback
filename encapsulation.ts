@@ -1,6 +1,6 @@
 // In this example, the class MyClass has a private property named _myProperty, 
 // which is only accessible within the class.
-class MyClass {
+class MyClass1 {
     private _myProperty: string;
   
     constructor(initialValue: string) {
@@ -23,7 +23,7 @@ class MyClass {
   }
   // 'private' keyword before variable '_myProperty' means the variable cannot be
   // accessed outside the class, only inside. This is the encapsulation in action.
-  const myObj = new MyClass("initial value");
+  const myObj = new MyClass1("initial value");
   console.log(myObj.myProperty); // prints "initial value"
   myObj.myProperty = "new value";
   console.log(myObj.myProperty); // prints "new value"
