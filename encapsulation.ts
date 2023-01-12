@@ -3,6 +3,7 @@
 
 // Encapsulation can be achieved by using access modifiers such as 'public', 'private', and 'protected'.
 // By default, members of a class are public. A member with private access modifier can only be accessed within the same class.
+// A member with 'protected' access modifier can be accessed within the same class and its subclasses.
 
 // In this example, the class MyClass has a private property named _myProperty, 
 // which is only accessible within the class.
@@ -31,7 +32,7 @@ class MyClass1 {
       console.log(`The value of myProperty is ${this._myProperty}`);
     }
   }
-  
+
   // 'private' keyword before variable '_myProperty' means the variable cannot be
   // accessed outside the class, only inside. This is the encapsulation in action.
   const myObj = new MyClass1("initial value");
