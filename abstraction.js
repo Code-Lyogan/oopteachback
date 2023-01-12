@@ -1,3 +1,5 @@
+// Abstraction is the process of hiding the implementation details of an 
+// object or class and exposing only the necessary information to the user.
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -15,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 // In this example we have an abstract class of Shape, which is the 'abstraction' of all possible shapes.
 var Shape = /** @class */ (function () {
-    // class defines properties and methods that any shape should have,
+    // class defines properties and methods that any 'shape' should have
     //  such as a 'name' and our methods 'getArea()' and 'getPerimeter()'. 
     function Shape(name) {
         this.name = name;
@@ -23,7 +25,7 @@ var Shape = /** @class */ (function () {
     return Shape;
 }());
 // two concrete classes 'Rectangle' and 'Circle', which are specific implementations of the 'Shape' abstract class
-// and need to implement the abstract methods defined in 'Shape'
+// need to implement the abstract methods defined in 'Shape'
 // These classes are representing the 'abstraction' from 'Shape' in concrete form.
 var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
@@ -45,7 +47,7 @@ var Rectangle = /** @class */ (function (_super) {
     return Rectangle;
 }(Shape));
 // two concrete classes 'Rectangle' and 'Circle', which are specific implementations of the 'Shape' abstract class
-// and need to implement the abstract methods defined in 'Shape'
+// need to implement the abstract methods defined in 'Shape'
 // These classes are representing the 'abstraction' from 'Shape' in concrete form.
 var Circle = /** @class */ (function (_super) {
     __extends(Circle, _super);
@@ -72,5 +74,4 @@ var circle = new Circle("Circle", 5);
 console.log("Area of ".concat(circle.name, " is ").concat(circle.getArea())); // prints "Area of Circle is 78.53981633974483"
 console.log("Perimeter of ".concat(circle.name, " is ").concat(circle.getPerimeter())); // prints "Perimeter of Circle is 31.41592653589793"
 // This is an example of how 'abstraction' allows you to focus on essential features
-// of an object, while hiding away unnecessary details, and promoting code 
-// reusability, flexibility and maintainability.
+// of an object, while hiding away unnecessary details.

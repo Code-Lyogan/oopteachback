@@ -1,3 +1,4 @@
+// in TypeScript, Inheritance is a tool that allows us to have one class inherit the properties and methods of another class.
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,6 +14,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+// A class that inherits from another class is called a subclass, 
+// while the class that is being inherited from is called the superclass.
 // In this example, we have a base class 'Animal' which is inherited by two classes 'Snake' and 'Horse'.
 var Animal = /** @class */ (function () {
     // 'Animal' class has a single constructor that takes a name parameter and sets it to the class variable.
@@ -28,6 +31,7 @@ var Animal = /** @class */ (function () {
 }());
 // The 'Snake' and 'Horse' classes are inherited from the 'Animal' class using the 'extends' keyword.
 // these classes are derived classes, having all properties and methods of the base class.
+// the extends keyword is used to create a subclass, and the 'super()' function is used to call the constructor of our superclass.
 var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
     function Snake(name) {
@@ -42,6 +46,7 @@ var Snake = /** @class */ (function (_super) {
 }(Animal));
 // The 'Snake' and 'Horse' classes are inherited from the 'Animal' class using the 'extends' keyword.
 // these classes are derived classes, having all properties and methods of the base class.
+// the extends keyword is used to create a subclass, and the 'super()' function is used to call the constructor of our superclass.
 var Horse = /** @class */ (function (_super) {
     __extends(Horse, _super);
     function Horse(name) {
@@ -54,13 +59,13 @@ var Horse = /** @class */ (function (_super) {
     };
     return Horse;
 }(Animal));
-// 'Snake' and 'Horse' classes override the 'move()' method of the base class.
+// 'Snake' and 'Horse' classes override the 'move()' method of the superclass.
 //  In this example, the Snake class overrides it by printing
 // "Slithering..." and Horse class overrides it by printing "Galloping..." 
-// before calling the 'move()' method of the base class. 
+// before calling the 'move()' method of the superclass. 
 var sam = new Snake("Sammy the Python");
 var tom = new Horse("Tommy the Palomino");
 sam.move();
 tom.move(34);
-// Inheritance in TypeScript allows our derived class to inherit all properties and methods
-// of the base class, and can then override the inherited methods to provide its own specific behavior.
+// In conclusion, Inheritance allows our subclass to inherit all properties and methods
+// of our superclass, and can then utilize & override the inherited methods to provide its own specific behavior.
