@@ -1,7 +1,10 @@
+// Abstraction is the process of hiding the implementation details of an 
+// object or class and exposing only the necessary information to the user.
+
 // In this example we have an abstract class of Shape, which is the 'abstraction' of all possible shapes.
 abstract class Shape {
+    // class defines properties and methods that any 'shape' should have
 
-    // class defines properties and methods that any shape should have,
     //  such as a 'name' and our methods 'getArea()' and 'getPerimeter()'. 
     constructor(public name: string) {}
   
@@ -12,7 +15,7 @@ abstract class Shape {
   }
   
   // two concrete classes 'Rectangle' and 'Circle', which are specific implementations of the 'Shape' abstract class
-  // and need to implement the abstract methods defined in 'Shape'
+  // need to implement the abstract methods defined in 'Shape'
   // These classes are representing the 'abstraction' from 'Shape' in concrete form.
   class Rectangle extends Shape {
     constructor(public name: string, public width: number, public height: number) {
@@ -28,7 +31,7 @@ abstract class Shape {
     }
   }
   // two concrete classes 'Rectangle' and 'Circle', which are specific implementations of the 'Shape' abstract class
-  // and need to implement the abstract methods defined in 'Shape'
+  // need to implement the abstract methods defined in 'Shape'
   // These classes are representing the 'abstraction' from 'Shape' in concrete form.
   class Circle extends Shape {
     constructor(public name: string, public radius: number) {
@@ -53,5 +56,4 @@ abstract class Shape {
   console.log(`Perimeter of ${circle.name} is ${circle.getPerimeter()}`); // prints "Perimeter of Circle is 31.41592653589793"
 
   // This is an example of how 'abstraction' allows you to focus on essential features
-  // of an object, while hiding away unnecessary details, and promoting code 
-  // reusability, flexibility and maintainability.
+  // of an object, while hiding away unnecessary details.
