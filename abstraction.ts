@@ -46,7 +46,7 @@ abstract class Shape {
       return 2 * Math.PI * this.radius;
     }
   }
-  
+
   const rect = new Rectangle("Rectangle", 5, 10);
   console.log(`Area of ${rect.name} is ${rect.getArea()}`); // prints "Area of Rectangle is 50"
   console.log(`Perimeter of ${rect.name} is ${rect.getPerimeter()}`); // prints "Perimeter of Rectangle is 30"
@@ -54,6 +54,11 @@ abstract class Shape {
   const circle = new Circle("Circle", 5);
   console.log(`Area of ${circle.name} is ${circle.getArea()}`); // prints "Area of Circle is 78.53981633974483"
   console.log(`Perimeter of ${circle.name} is ${circle.getPerimeter()}`); // prints "Perimeter of Circle is 31.41592653589793"
+
+  // The 'getArea()' & 'getPerimeter()' methods are abstract methods, and do not have an 
+  // implementation in the class 'Shape', they should be implemented by our subclass extended by 'Shape'. The Rectangle
+  // and Circle classes are subclasses of our superclass that will define the abstract methods getArea() and getPerimeter()
+  // when utilized in their own implementation.
 
   // This is an example of how 'abstraction' allows you to focus on essential features
   // of an object, while hiding away unnecessary details.
