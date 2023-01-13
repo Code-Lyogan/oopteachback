@@ -42,6 +42,8 @@ abstract class Shape1 {
   }
   // Here we have created a 'drawShapes()' function that will take the array of 'Shape1' as input
   // and then call the 'draw()' method on each of the shapes.
+
+  // This function will iterate through all the 'shapes' passed in and call the draw method on each one.
   function drawShapes(shapes: Shape1[]) {
       for (const shape of shapes) {
           shape.draw();
@@ -54,7 +56,7 @@ abstract class Shape1 {
   const triangle = new Triangle("Triangle 1");
   
   drawShapes([circ, square, triangle]);
-  
+
   // This is polymorphism in action. Objects of different types can be treated
   // as objects of a common base type, as long as they are using the same methods.
   
